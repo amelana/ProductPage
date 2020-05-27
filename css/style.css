@@ -400,7 +400,6 @@ padding: 7px 0px;
  .scrin-block .scrin-block__row{
     flex: 100%;
  }
-
 }
 
 @media (max-width:800px){
@@ -421,7 +420,6 @@ padding: 7px 0px;
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 }
 
 
@@ -508,7 +506,7 @@ padding: 7px 0px;
     margin-left: 28px;
 }
 
-.reviews__text:before {
+.reviews__text:before{
     content: '';
     width: 0;
     height: 0;
@@ -519,6 +517,8 @@ padding: 7px 0px;
     right: 100%;
     top: 27px;
 }
+
+
 
 .reviews__text p {
     font-size: 14px;
@@ -597,9 +597,22 @@ padding: 7px 0px;
 
 @media (max-width: 585px) {
 
+.reviews__item:nth-of-type(odd) .reviews__text:before{
+    right:0;
+    left: 100%;
+    transform: rotate(180deg);
+}
+
+.reviews__item:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.reviews__item:nth-of-type(odd) .reviews__text{
+    margin:0 15px 0 0;
+}
+
 
     .reviews__item {
-
         width: 100%;
         margin: 0 0 10px 0;
     }
@@ -615,6 +628,11 @@ padding: 7px 0px;
 }
 
 @media (max-width: 450px){
+
+.reviews__text {
+width: calc(100% - 30%);
+}
+
 .flex .reviews__item{
 flex-wrap: wrap;
     }
@@ -807,11 +825,9 @@ input[type="submit"]{
     text-transform: uppercase;
     margin-bottom: 0;
     cursor: pointer;
+    background: #f5f5f5;
 }
 
-input[type="submit"]:hover{
-  color: #f5f5f5;  
-}
 
 .contacts__contacts a{
 color: #b7bbc0;
@@ -891,9 +907,17 @@ padding-top: 6px;
 .contacts__soc a{
     margin: 0 5px 0 0;
     overflow:hidden;
+     padding: 0px;
 }
 
-.twitter{
+.contacts__soc {}
+
+.facebook {}
+.instagram {}
+.google {}
+.youtube {}
+
+/*.twitter{
 background: url(../img/0.png)-1px -60px no-repeat;
 width: 60px;
 height: 60px;
@@ -957,7 +981,7 @@ background-size: cover;
 background: url(../img/05.png)-3px 1px no-repeat; 
 background-size: cover;
 }
-
+*/
 /*---------Adaptive Mobile Contacts-----------*/
 
 @media (max-width:800px ) {
@@ -1008,7 +1032,9 @@ justify-content: center;
 
 @media (max-width:450px ){
 
-
+ .contacts__contacts {
+    margin: 10px 0 0 0;
+ }
     .contacts__contacts ul{
     display: flex;
     flex-wrap: wrap;
@@ -1025,7 +1051,8 @@ justify-content: center;
 }
 
 .contacts__soc a{
-    margin:0;
+    margin:0 10px 0 0;
+
 }
 
 .contacts__contacts ul li{
@@ -1035,9 +1062,7 @@ justify-content: center;
     .contacts {
     padding:10px 0px;
 }
-.contacts__title {
-    margin:0px 0 8px 0;
-}
+
 }
 
 /*--------------------------------------------*/
@@ -1059,8 +1084,6 @@ text-align: center;
    .footer__text {
     font-size: 12px;
 } 
-
 }
-
 
 /*------------------------------------------------*/
